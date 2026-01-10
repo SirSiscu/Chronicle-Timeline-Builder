@@ -10,7 +10,7 @@ import html2canvas from 'html2canvas';
 const DEFAULT_EVENTS: TimelineEvent[] = [
   {
     id: '1',
-    title: 'Exemple: Naixement de CronoEdu',
+    title: 'Exemple: Naixement de Chronicle',
     description: 'Aquesta és una línia del temps interactiva pensada per a l\'aprenentatge.',
     startDate: '2024',
     color: '#3b82f6'
@@ -27,12 +27,12 @@ const DEFAULT_EVENTS: TimelineEvent[] = [
 
 const App: React.FC = () => {
   const [events, setEvents] = useState<TimelineEvent[]>(() => {
-    const saved = localStorage.getItem('cronoedu_events');
+    const saved = localStorage.getItem('chronicle_events');
     return saved ? JSON.parse(saved) : DEFAULT_EVENTS;
   });
 
   const [config, setConfig] = useState<TimelineConfig>(() => {
-    const saved = localStorage.getItem('cronoedu_config');
+    const saved = localStorage.getItem('chronicle_config');
     return saved ? JSON.parse(saved) : {
       orientation: 'horizontal',
       scale: 'compressed',
@@ -54,11 +54,11 @@ const App: React.FC = () => {
   const timelineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    localStorage.setItem('cronoedu_events', JSON.stringify(events));
+    localStorage.setItem('chronicle_events', JSON.stringify(events));
   }, [events]);
 
   useEffect(() => {
-    localStorage.setItem('cronoedu_config', JSON.stringify(config));
+    localStorage.setItem('chronicle_config', JSON.stringify(config));
   }, [config]);
 
   const t = translations[config.language];
@@ -214,7 +214,7 @@ const App: React.FC = () => {
 
       const image = canvas.toDataURL("image/png");
       const link = document.createElement('a');
-      link.download = `cronoedu-${Date.now()}.png`;
+      link.download = `chronicle-${Date.now()}.png`;
       link.href = image;
       link.click();
     } catch (error) {
@@ -349,8 +349,10 @@ const App: React.FC = () => {
       `}>
         <div className="p-6 h-full flex flex-col">
           <div className="flex items-center justify-between mb-8">
-            <h1 className="text-2xl font-bold text-blue-500 flex items-center gap-2">
-              <span className="p-1.5 bg-blue-100 dark:bg-blue-900/50 rounded-lg">⏳</span>
+            <h1 className="text-2xl font-bold text-blue-500 flex items-center gap-3">
+              <div className="p-1 bg-white shadow-sm rounded-xl border border-slate-100 dark:bg-slate-700 dark:border-slate-600">
+                <img src="/assets/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
+              </div>
               {t.title}
             </h1>
             <button
@@ -393,8 +395,10 @@ const App: React.FC = () => {
             )}
             {/* Title when sidebar is closed */}
             {!isSidebarOpen && (
-              <h1 className="text-xl font-bold text-blue-500 flex items-center gap-2">
-                <span className="p-1 bg-blue-100 dark:bg-blue-900/50 rounded-md text-sm">⏳</span>
+              <h1 className="text-xl font-bold text-blue-500 flex items-center gap-3">
+                <div className="p-1 bg-white shadow-sm rounded-lg border border-slate-100 dark:bg-slate-700 dark:border-slate-600">
+                  <img src="/assets/logo.png" alt="Logo" className="w-5 h-5 object-contain" />
+                </div>
                 {t.title}
               </h1>
             )}

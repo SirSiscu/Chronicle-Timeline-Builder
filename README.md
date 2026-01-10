@@ -1,7 +1,7 @@
 
-# ⏳ CronoEdu - Línies del Temps Interactives
+# ⏳ Chronicle – Timeline Builder
 
-**CronoEdu** és una eina web avançada, 100% *client-side*, dissenyada per a docents i alumnes que necessiten crear visualitzacions temporals clares, potents i estètiques. Permet des de l'estudi de biografies fins a escales geològiques complexes.
+**Chronicle** és una eina web avançada, 100% *client-side*, dissenyada per a docents i alumnes que necessiten crear visualitzacions temporals clares, potents i estètiques. Permet des de l'estudi de biografies fins a escales geològiques complexes.
 
 ## 🚀 Funcionalitats Principals
 

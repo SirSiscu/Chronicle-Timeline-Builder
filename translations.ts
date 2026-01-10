@@ -3,7 +3,7 @@ import { TranslationStrings, Language } from './types';
 
 export const translations: Record<Language, TranslationStrings> = {
   ca: {
-    title: "CronoEdu",
+    title: "Chronicle",
     addEvent: "Afegir Esdeveniment",
     editEvent: "Editar Esdeveniment",
     exportPng: "Exportar a PNG",
@@ -48,7 +48,7 @@ export const translations: Record<Language, TranslationStrings> = {
     showHide: "Mostrar / Amagar:"
   },
   es: {
-    title: "CronoEdu",
+    title: "Chronicle",
     addEvent: "Añadir Evento",
     editEvent: "Editar Evento",
     exportPng: "Exportar a PNG",
@@ -93,7 +93,7 @@ export const translations: Record<Language, TranslationStrings> = {
     showHide: "Mostrar / Ocultar:"
   },
   en: {
-    title: "CronoEdu",
+    title: "Chronicle",
     addEvent: "Add Event",
     editEvent: "Edit Event",
     exportPng: "Export to PNG",
