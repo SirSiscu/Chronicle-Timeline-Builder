@@ -1,0 +1,5 @@
+{
+  "name": "CronoEdu - Línies del Temps Interactives",
+  "description": "Una eina potent i intuïtiva per crear línies del temps interactives per a docents i alumnes. Permet visualització proporcional o comprimida, exportació a Excel i PNG, i suport multimèdia.",
+  "requestFramePermissions": []
+}
