@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { TimelineEvent, TimelineConfig, Language } from './types';
+
 import { translations } from './translations';
 import TimelineRenderer from './components/TimelineRenderer';
 import Sidebar from './components/Sidebar';
