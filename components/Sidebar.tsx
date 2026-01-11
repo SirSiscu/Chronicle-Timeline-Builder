@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { TimelineEvent, TimelineConfig, Language, LANGUAGES } from '../types';
+import { TimelineEvent, TimelineConfig } from '../types';
 import { translations } from '../translations';
 import EventEditor from './EventEditor';
 
@@ -23,8 +23,9 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({
   config, setConfig, events, editingEvent, onSaveEvent,
   onCancelEdit, onDeleteEvent, onEditEvent, onAddEvent,
-  onExportExcel, onImportExcel, onExportPng, setIsDirty
+  onImportExcel, setIsDirty
 }) => {
+
   const t = translations[config.language];
 
   if (editingEvent) {

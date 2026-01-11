@@ -80,7 +80,6 @@ const TimelineRenderer: React.FC<TimelineRendererProps> = ({ events, config, onE
       while (true) {
         // Reduced buffer to allow tight packing, or usage of strict inequality
         // Using 0 buffer allows "touching" events to share a track if logic is correct
-        const buffer = 0;
 
         // Strict Less-Than or Equal check: if trackEnd <= currentStart, it fits.
         // tracks[trackId].end represents the *occupied* space.
@@ -234,8 +233,6 @@ const TimelineRenderer: React.FC<TimelineRendererProps> = ({ events, config, onE
         const baseDistance = 56;
         const totalCardDistance = baseDistance + levelOffsetPx;
 
-        let lineLength = 0;
-        let lineStartOffset = 0;
         const cardSign = isOdd ? -1 : 1;
         const cardEdgePos = cardSign * totalCardDistance;
         const anchorPos = isRange ? anchorOffsetPixels : 0;
@@ -321,7 +318,6 @@ const TimelineRenderer: React.FC<TimelineRendererProps> = ({ events, config, onE
       {/* Events Rendering */}
       {sortedEvents.map((event, index) => {
         const startPos = getPercent(event.startDate);
-        const endPos = event.endDate ? getPercent(event.endDate) : startPos;
         const isRange = !!event.endDate && config.scale === 'proportional';
 
         // --- TEXT MODE LOGIC ---
