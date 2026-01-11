@@ -138,6 +138,16 @@ const Sidebar: React.FC<SidebarProps> = ({
           ))}
         </div>
       </section>
+      {/* Credits Section */}
+      <footer className="pt-4 border-t border-slate-100 dark:border-slate-800">
+        <div className={`text-[10px] ${config.darkMode ? 'text-slate-500' : 'text-slate-400'} text-center space-y-1`}>
+          <p>Creat per <span className="font-semibold">Francesc Sala Carbó</span></p>
+          <div className="flex justify-center gap-3">
+            <a href="https://github.com/SirSiscu" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">GitHub</a>
+            <a href="https://buymeacoffee.com/francescsala" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">Buy Me a Coffee</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
